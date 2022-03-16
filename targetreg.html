@@ -25,13 +25,15 @@
 
     <body>
         <div id="container">
-            This is the XRElement - Clova Image
+            This is the XRElement - Magnesium
         </div>
         <script>
             letsee.ready(() => {
                 letsee.start();
                 //Add target
-                letsee.addTarget('https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d')
+                // Clova : https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d
+                // Magnesim : https://developer.letsee.io/api-tm/target-manager/target-uid/62314b990a8fd213c001593f
+                letsee.addTarget('https://developer.letsee.io/api-tm/target-manager/target-uid/62314b990a8fd213c001593f')
                     .then(entity => {
                         let xrElement = letsee.createXRElement(document.getElementById('container'));
                         letsee.bindXRElement(xrElement, entity);
