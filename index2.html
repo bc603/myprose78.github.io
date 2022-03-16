@@ -1,7 +1,21 @@
 
 
-<HTML>
-  <body>
-    <h1>A frew Good man</h1>
-  </body>
-</HTML>
+<script src="https://developer.letsee.io/api/webar?key=e6b85361a56b7719be2ac6eb61a67a861e21b86b8e920b37db1b110395133f17"></script>
+
+<script>
+	letsee.ready(callback);
+	letsee.init({ trackerType: 'Type of supported trackers(image | marker | qrcode)'};
+	letsee.onTrackStart((e) => {
+		// describe the contents of the callback function to be operated when tracking starts
+	});
+  letsee.onTrackMove((e) => {
+    // describe the contents of the callback function to be operated when tracking starts
+	});
+  letsee.onTrackEnd((e) => {
+	  // describe the contents of the callback function to be operated when tracking starts
+  });
+	const callback = () => {
+		letsee.start(); 
+		// After engine preparation is complete, be sure to execute the start() method to enable AR mode to operate.
+	};
+</script>
