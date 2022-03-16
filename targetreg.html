@@ -1,0 +1,35 @@
+<!--
+    1. Image target registation using tag media="place"
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Image target</title>
+
+        <style media="place" type="text/css">
+            #container {
+                -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/623162940a8fd213c0015940');
+                width: 480px;
+                height: 640px;
+                border: 5px solid red;
+            }
+        </style>
+
+        <script src="https://developer.letsee.io/api/webar?key=e6b85361a56b7719be2ac6eb61a67a861e21b86b8e920b37db1b110395133f17"></script>
+
+    </head>
+
+    <body>
+        <div id="container">
+            This is the XRElement
+        </div>
+        <script>
+            letsee.ready(() => {
+                letsee.start();
+            });
+            letsee.init({trackerType: 'image'});
+        </script>
+    </body>
+</html>
