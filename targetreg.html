@@ -7,10 +7,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Image target</title>
-
+        <!-- 타겟이미지(8층 입구 안쪽) : 보더처리가 제대로 되지 않음
+        https://developer.letsee.io/api-tm/target-manager/target-uid/623162940a8fd213c0015940
+        -->
         <style media="place" type="text/css">
             #container {
-                -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/623162940a8fd213c0015940');
+                -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d');
                 width: 480px;
                 height: 640px;
                 border: 5px solid red;
@@ -23,7 +25,7 @@
 
     <body>
         <div id="container">
-            This is the XRElement
+            This is the XRElement - Clova Image
         </div>
         <script>
             letsee.ready(() => {
