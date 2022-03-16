@@ -7,12 +7,15 @@
 </head>
 <body>
 <div id="container">
-    Hello, world!
+    Hello, world! - 클로바로 이미지 변경
 </div>
 <script>
     letsee.ready(() => {
       letsee.start();
-      letsee.addTarget('https://developer.letsee.io/api-tm/target-manager/target-uid/609ca3af398942b60ead2d06')
+      /* 타겟이미지(8층 입구 안쪽) : 보더처리가 제대로 되지 않음
+            https://developer.letsee.io/api-tm/target-manager/target-uid/609ca3af398942b60ead2d06
+        */
+      letsee.addTarget('https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d')
         .then(entity => {
             let xrElement = letsee.createXRElement(document.getElementById('container'));
             letsee.bindXRElement(xrElement, entity);
