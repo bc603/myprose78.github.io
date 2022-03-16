@@ -13,8 +13,8 @@
         <style media="place" type="text/css">
             #container {
                 -letsee-target: uri('https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d');
-                width: 480px;
-                height: 640px;
+                width: 505px;
+                height: 800px;
                 border: 5px solid red;
             }
         </style>
@@ -30,6 +30,12 @@
         <script>
             letsee.ready(() => {
                 letsee.start();
+                //Add target
+                letsee.addTarget('https://developer.letsee.io/api-tm/target-manager/target-uid/62316d9eb6f9af1f05858b7d')
+                    .then(entity => {
+                        let xrElement = letsee.createXRElement(document.getElementById('container'));
+                        letsee.bindXRElement(xrElement, entity);
+                    });
             });
             letsee.init({trackerType: 'image'});
         </script>
